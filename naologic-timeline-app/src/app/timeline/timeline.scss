@@ -1,0 +1,50 @@
+/*
+Source - https://stackoverflow.com/a/22775925
+Posted by Erasmus, modified by community. See post 'Timeline' for change history
+Retrieved 2026-03-05, License - CC BY-SA 4.0
+*/
+
+table td + td { border-left:2px solid slateblue; }
+
+table{
+    th,td{width:12.5vw}
+    // width:100vw;
+}
+.table-wrapper{
+//   width:90vw   ; 
+//   height:67vh;
+}
+td{
+    height:5vw
+}
+
+
+.timeline-container{
+    position:relative;
+    width:1500px;
+    border: solid blueviolet;
+    border-width: 1px 0px 0px 0px;
+    display:flex;
+    height:calc(100vh - 115px);
+    background-color: rgba(211, 211, 211, 0.401);
+    
+
+}
+.timeline-month-container{
+    width:150px;
+    height:calc(100vh - 116px);
+    position: sticky;
+    text-align: center;
+    top: 0;
+    border-right:1px solid rgba(137, 43, 226, 0.319);
+    
+}
+.timeline-months{
+    width:150px;
+    height:50px;
+    border-bottom:1px solid rgba(137, 43, 226, 0.319);
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    background-color:white;
+}
