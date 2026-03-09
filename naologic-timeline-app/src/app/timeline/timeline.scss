@@ -30,8 +30,8 @@ td{
     
 
 }
-.timeline-month-container{
-    width:150px;
+.timeline-zoom-level-container{
+    // width:1500px;
     height:calc(100vh - 116px);
     position: sticky;
     text-align: center;
@@ -39,12 +39,28 @@ td{
     border-right:1px solid rgba(137, 43, 226, 0.319);
     
 }
-.timeline-months{
-    width:150px;
+.timeline-zoom-level{
     height:50px;
     border-bottom:1px solid rgba(137, 43, 226, 0.319);
     justify-content: center;
     align-items: center;
     display:flex;
     background-color:white;
+}
+.work-order-bar-container{
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    top: 52px;
+    position: absolute;
+    border: 2px solid rgb(0, 128, 0);
+    background-color: rgba(17, 203, 17, 0.409);
+    border-radius: 13px;
+    height: 50px;
+    padding: 11px;
+    font-size: 9px;
+
+}
+.work-order-bar{
+
 }
