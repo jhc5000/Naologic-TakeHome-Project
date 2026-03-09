@@ -41,11 +41,37 @@
 
 <div class="timeline-container overflow-x-auto ">
     <!-- coding for day zoom level -->
-      @for (month of months; track month){
-        <div class="timeline-month-container">
-            <div class="timeline-months"><span>{{month}}</span></div>
+      @if(zoomLevel=="months"){
+        @for (month of months; track month){
+        <div class="timeline-container" [ngStyle]="{'width': (1500/280) + 'px'}">
+            <div class="timeline" ><span>{{month}}</span></div>
         </div>
         }
+     }@else if(zoomLevel=="weeks"){
+        @for (week of weeks; track $index){
+        <div class="timeline-container" [ngStyle]="{'width': (1500/70) + 'px'}">
+            <div class="timeline"><span>{{week}}</span></div>
+        </div>
+        }
+     }@else if(zoomLevel=="days"){
+        @for (day of days; track $index){
+        <div class="timeline-zoom-level-container" [ngStyle]="{'width':'150px'}">
+            <div class="timeline-zoom-level"><span>{{day}}</span></div>
+        </div>
+        }
+     }
+     <!-- bar positions -->
+    @if(calculatedDateRange){
+    @for(wo of transformedWorkOrderDocs; track $index){
+        <div class="work-order-bar-container" [ngStyle]=findBarPosition(wo)>
+            <div class="work-order-bar">{{wo?.data?.name}}</div>
+        </div>
+    }
+    }
+      
+   
+     
+     
      
 </div>
 
